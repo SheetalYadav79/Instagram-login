@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Login</title>
+  <link rel="stylesheet" href="first.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <h1>Instagram</h1>
+      <form id="login-form">
+        <input type="text" placeholder="Phone number, username, or email" id="username">
+        <input type="password" placeholder="Password" id="password">
+        <button id="login-button" class="gradient-button" type="button">Log In</button>
+      </form>
+      <div class="divider">
+        <span>OR</span>
+      </div>
+      <button class="fb-login">Log in with Facebook</button>
+      <a href="#" class="forgot-password">Forgot password?</a>
+    </div>
+    <div id="signup" class="signup-box">
+      <p>Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+  </div>
+
+  <script>
+    const loginButton = document.getElementById('login-button');
+    const signup = document.getElementById('signup');
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+
+    signup.ondblclick = function() {
+      alert("Rediricting to signUp page...");
+    }
+
+    loginButton.onclick = function () {
+      const username = usernameInput.value.trim();
+      const password = passwordInput.value.trim();
+
+      if (!username || !password) {
+        alert("Please fill out both fields.");
+        return;
+      }
+      else {
+        alert("Login Successfull");
+      }
+    };
+
+    loginButton.onmouseover= function() {
+      loginButton.style.backgroundColor = "#7a3a98";
+    }
+
+    loginButton.onmouseout = function() {
+      loginButton.style.backgroundColor = "#ff5945";
+    }
+
+  </script>
+</body>
+</html>
